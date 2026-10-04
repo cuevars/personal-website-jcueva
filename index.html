@@ -83,7 +83,7 @@ footer{margin-top:40px;color:var(--dim);font-size:13px}
         <p class="out"><span class="tag">status:</span> looking for summer 2027 internships<br>
         <span class="dim">base:</span> New York, NY<br>
         <span class="dim">speaks:</span> English, Spanish (fluent)</p>
-        <p class="out">Poke around, and tap a command at the bottom of the page if you want to play with the terminal.</p>
+        <p class="out">Poke around, and type <b>help</b> in the prompt at the bottom if you want to play with the terminal.</p>
       </div>
       <figure class="photo" style="margin-left:0;margin-bottom:0">
         <div class="bar"><span style="margin:0">profile.jpg</span></div>
@@ -173,8 +173,7 @@ footer{margin-top:40px;color:var(--dim);font-size:13px}
 
     <section aria-label="Interactive terminal">
       <div id="out" aria-live="polite"></div>
-      <form class="prompt" id="f" autocomplete="off"><label for="in">visitor@portfolio:~$</label><input id="in" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go" placeholder="type a command, or just press run" aria-label="Terminal command"></form>
-
+      <form class="prompt" id="f" autocomplete="off"><label for="in">visitor@portfolio:~$</label><input id="in" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="type help and press enter" aria-label="Terminal command"></form>
     </section>
 
     <footer>exit 0 <span class="cursor" aria-hidden="true"></span></footer>
@@ -216,7 +215,6 @@ footer{margin-top:40px;color:var(--dim);font-size:13px}
     if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest',behavior:'smooth'});
   }
   form.addEventListener('submit',function(e){e.preventDefault();var v=inp.value;inp.value='';run(v);});
-  });
 })();
 </script>
 </body>
