@@ -173,17 +173,8 @@ footer{margin-top:40px;color:var(--dim);font-size:13px}
 
     <section aria-label="Interactive terminal">
       <div id="out" aria-live="polite"></div>
-      <form class="prompt" id="f" autocomplete="off"><label for="in">visitor@portfolio:~$</label><input id="in" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="type a command, or just press run" aria-label="Terminal command"><button type="submit">run</button></form>
-      <div class="chips" id="chips">
-        <button type="button" data-c="help">help</button>
-        <button type="button" data-c="projects">projects</button>
-        <button type="button" data-c="skills">skills</button>
-        <button type="button" data-c="coffee">coffee</button>
-        <button type="button" data-c="music">music</button>
-        <button type="button" data-c="spots">spots</button>
-        <button type="button" data-c="theme">theme</button>
-        <button type="button" data-c="clear">clear</button>
-      </div>
+      <form class="prompt" id="f" autocomplete="off"><label for="in">visitor@portfolio:~$</label><input id="in" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go" placeholder="type a command, or just press run" aria-label="Terminal command"></form>
+
     </section>
 
     <footer>exit 0 <span class="cursor" aria-hidden="true"></span></footer>
@@ -225,8 +216,6 @@ footer{margin-top:40px;color:var(--dim);font-size:13px}
     if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest',behavior:'smooth'});
   }
   form.addEventListener('submit',function(e){e.preventDefault();var v=inp.value;inp.value='';run(v);});
-  document.getElementById('chips').addEventListener('click',function(e){
-    var b=e.target.closest('button[data-c]');if(b)run(b.getAttribute('data-c'));
   });
 })();
 </script>
